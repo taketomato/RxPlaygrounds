@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42B8791C1EA9806F001C2CC9 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B8791B1EA9806F001C2CC9 /* RxCocoa.framework */; };
+		42B8791D1EA9806F001C2CC9 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42B8791B1EA9806F001C2CC9 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		42B879201EA98075001C2CC9 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B8791F1EA98075001C2CC9 /* RxSwift.framework */; };
+		42B879211EA98075001C2CC9 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42B8791F1EA98075001C2CC9 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42E2D0EE1EA86BC2009DF67F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E2D0ED1EA86BC2009DF67F /* AppDelegate.swift */; };
 		42E2D0F01EA86BC2009DF67F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E2D0EF1EA86BC2009DF67F /* ViewController.swift */; };
 		42E2D0F31EA86BC2009DF67F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E2D0F11EA86BC2009DF67F /* Main.storyboard */; };
@@ -33,7 +37,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		42B8791E1EA9806F001C2CC9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				42B879211EA98075001C2CC9 /* RxSwift.framework in Embed Frameworks */,
+				42B8791D1EA9806F001C2CC9 /* RxCocoa.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		42B8791B1EA9806F001C2CC9 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		42B8791F1EA98075001C2CC9 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		42B879221EA9809B001C2CC9 /* RxPlaygrounds.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RxPlaygrounds.playground; sourceTree = "<group>"; };
 		42E2D0EA1EA86BC2009DF67F /* RxPlaygrounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxPlaygrounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E2D0ED1EA86BC2009DF67F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42E2D0EF1EA86BC2009DF67F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42B879201EA98075001C2CC9 /* RxSwift.framework in Frameworks */,
+				42B8791C1EA9806F001C2CC9 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +101,13 @@
 		42E2D0E11EA86BC2009DF67F = {
 			isa = PBXGroup;
 			children = (
+				42B879221EA9809B001C2CC9 /* RxPlaygrounds.playground */,
 				42E2D0EC1EA86BC2009DF67F /* RxPlaygrounds */,
 				42E2D1011EA86BC2009DF67F /* RxPlaygroundsTests */,
 				42E2D10C1EA86BC2009DF67F /* RxPlaygroundsUITests */,
 				42E2D0EB1EA86BC2009DF67F /* Products */,
+				42B8791F1EA98075001C2CC9 /* RxSwift.framework */,
+				42B8791B1EA9806F001C2CC9 /* RxCocoa.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +162,7 @@
 				42E2D0E61EA86BC2009DF67F /* Sources */,
 				42E2D0E71EA86BC2009DF67F /* Frameworks */,
 				42E2D0E81EA86BC2009DF67F /* Resources */,
+				42B8791E1EA9806F001C2CC9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -414,6 +442,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxPlaygrounds/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.jrits.RxPlaygrounds;
@@ -426,6 +458,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxPlaygrounds/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.jrits.RxPlaygrounds;
@@ -507,6 +543,7 @@
 				42E2D1141EA86BC2009DF67F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42E2D1151EA86BC2009DF67F /* Build configuration list for PBXNativeTarget "RxPlaygroundsTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +552,7 @@
 				42E2D1171EA86BC2009DF67F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42E2D1181EA86BC2009DF67F /* Build configuration list for PBXNativeTarget "RxPlaygroundsUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +561,7 @@
 				42E2D11A1EA86BC2009DF67F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
