@@ -53,9 +53,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		427560381EAEFFDE0053E4C1 /* RxViewControllerPlaygrounds.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RxViewControllerPlaygrounds.playground; sourceTree = "<group>"; };
 		42B8791B1EA9806F001C2CC9 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		42B8791F1EA98075001C2CC9 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		42B879221EA9809B001C2CC9 /* RxPlaygrounds.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RxPlaygrounds.playground; sourceTree = "<group>"; };
 		42E2D0EA1EA86BC2009DF67F /* RxPlaygrounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxPlaygrounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E2D0ED1EA86BC2009DF67F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42E2D0EF1EA86BC2009DF67F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		42E2D0E11EA86BC2009DF67F = {
 			isa = PBXGroup;
 			children = (
-				42B879221EA9809B001C2CC9 /* RxPlaygrounds.playground */,
+				427560381EAEFFDE0053E4C1 /* RxViewControllerPlaygrounds.playground */,
 				42E2D0EC1EA86BC2009DF67F /* RxPlaygrounds */,
 				42E2D1011EA86BC2009DF67F /* RxPlaygroundsTests */,
 				42E2D10C1EA86BC2009DF67F /* RxPlaygroundsUITests */,
